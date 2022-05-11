@@ -48,7 +48,7 @@
     flex-direction: row-reverse;
 }
 .movie-button-delete  {
-  background-color: #9b2522;
+  background-color:blue;
   width: 50px;
   border: none;
   height: 40px;
