@@ -3,8 +3,6 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-   
-
 }
 .movieslist-loadmore-button {
     color : white;
@@ -24,3 +22,25 @@
     color: black;
 
 }
+
+/* responsive */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .movieslist-container {
+        display: block;
+    } 
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .movieslist-container {
+        display: block;
+    }  
+}
+
+@media screen and (min-width: 1024px) {
+    .movieslist-container {
+        display: flex;
+    }   
+}
+  
+ 
+
