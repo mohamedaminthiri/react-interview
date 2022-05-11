@@ -40,7 +40,7 @@ class App extends React.Component {
               <option >{e}</option>
             ))}
           </select>
-   <MoviesList category={this.state.category}/>
+   <MoviesList category={this.state.category} categories={this.state.categories}/>
     </div>
   );
 }

@@ -35,14 +35,23 @@ loadMore = () => {
     return {canSee: old.canSee + 4}
   })
 }
-
+//supression d'un film
 handleClick = (e) => {
   const newMovie = this.state.movie
   const index = newMovie.findIndex(item => item.id === (e))
   const remove = window.confirm("supprimer ce film de la site ?")
   if (remove) {
+    const cat=newMovie[index].category;
+    console.log(cat)
       newMovie.splice(index, 1)
       this.setState({ movie : newMovie})
+     
+      //supression de catégorie de film suprimé de la liste dynamique  si elle est unique
+       if(this.state.movie.findIndex(item => item.category===(cat))<0){
+         const indexcategorie=this.props.categories.findIndex(item => item.category === cat);
+         this.props.categories.splice(indexcategorie,1) 
+       }
+      
   }
 }
 //ajout les likes
