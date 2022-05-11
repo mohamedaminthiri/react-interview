@@ -49,11 +49,13 @@ handleClick = (e) => {
       //supression de catégorie de film suprimé de la liste dynamique  si elle est unique
        if(this.state.movie.findIndex(item => item.category===(cat))<0){
          const indexcategorie=this.props.categories.findIndex(item => item.category === cat);
-         this.props.categories.splice(indexcategorie,1) 
+         this.props.categories.splice(indexcategorie,1)
        }
-      
-  }
+      }
+    
 }
+
+
 //ajout les likes
 addlike= (e) => {
   const newMovie = this.state.movie

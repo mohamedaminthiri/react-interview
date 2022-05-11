@@ -13,8 +13,9 @@ class App extends React.Component {
     arr:[]
   }
   componentWillMount() {
-  
+      
       this.state.listemovies= movies
+      
 //remplir array de catégories distinct pour remplir une liste dynamique
   console.log(this.state.listemovies)
     for(var i=0;i<this.state.listemovies.length;i++){
