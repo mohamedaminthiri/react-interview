@@ -59,7 +59,7 @@ export const movies = [
     category: 'Thriller',
     likes: 22,
     dislikes: 12
-  },
+  }
 ]
-
+//consulter le fichier MoviesList.js j'ai utilisé movies$.then dans la fonction componentWillMount() avec le comportement asynchrone
 export const movies$ = new Promise((resolve, reject) => setTimeout(resolve, 100, movies))
