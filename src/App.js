@@ -1,6 +1,7 @@
 import React from 'react';
 import MoviesList from "./components/MoviesList"
 import './App.css'
+import Pagination from "./components/Pagination"
 import { movies } from './movies';
 
 class App extends React.Component {
