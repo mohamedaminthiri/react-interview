@@ -1,7 +1,7 @@
 import React from 'react'
 import Movies from './Movies'
 import './MoviesList.css'
-import {movies} from './../movies'
+import {movies$} from './../movies'
 //composant d'affichage la liste des movies
 class MoviesList extends React.Component {
   constructor(props){
@@ -16,10 +16,18 @@ this.deslike=this.deslike.bind(this)
 this.loadMore = this.loadMore.bind(this)
 }
 componentWillMount() {
-  this.setState({
-    movie: movies//remplir array movie par les méta-data dans movies importé de fichier movies.js dans le dossier src
-})
-console.log(movies)
+  //sans suppression du comportement asynchrone dans movies.js
+movies$
+.then(
+    movies => { this.setState({
+      movie: movies//remplir array movie par les méta-data dans movies importé de fichier movies.js dans le dossier src
+  })
+   console.log(this.state.movie);    
+    }
+  
+)
+.catch(error => console.log(error))
+
 }
 //founction d'afficher les movies suivantes(affichage par 4 movies)
 loadMore = () => {

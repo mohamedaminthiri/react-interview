@@ -1,6 +1,6 @@
 import React from "react";
 import "./Movies.css";
-//function  presente une seule movie et ces informations et les opérations effectué(supression,ajout likes,ajout dislikes)
+//composant  presente une seule movie et ces informations et les opérations effectué(supression,ajout likes,ajout dislikes)
 const Movies = ({ handleClick,addlike,deslike, id, title, category, likes, dislikes }) => {
   return (
     <figure className="movie-container">
