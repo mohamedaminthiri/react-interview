@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color :white;
+  background-image: url("./img/Youtube-Logo-Transparent-Background.png");
   min-height: 150vh;
 
 }

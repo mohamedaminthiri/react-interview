@@ -33,7 +33,7 @@ class App extends React.Component {
   render() {
   return (
     <div className="App">
-       <select className="app-select" onChange={this.handleChange}>
+       recherche <select className="app-select" onChange={this.handleChange}>
              <option id="Default"></option>
             {/* remplir la liste dynamique à partir d'array des differentes catégories */}
             {this.state.categories.map(e=>(
